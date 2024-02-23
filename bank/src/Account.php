@@ -1,5 +1,12 @@
 <?php
+    class Account 
+    {
+        private $holder;
+        private float $saldo;
 
-?>
-
-<h1>Start Bank project.</h1>
+        public function __construct(Holder $holder)
+        {
+            $this->holder = $holder;
+            $this->saldo = 0;
+        }
+    }
