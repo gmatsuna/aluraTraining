@@ -25,6 +25,6 @@ class Holder
         if (!preg_match($regex, $cpf)) {
             throw new \Exception('CPF inválido');
         }
-        var_dump($cpf);
+        return;
     }
 }

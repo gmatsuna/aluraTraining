@@ -3,11 +3,18 @@
     {
         private $holder;
         private float $saldo;
+        private static $numeroDeContas = 0;
 
         public function __construct(Holder $holder)
         {
             $this->holder = $holder;
             $this->saldo = 0;
+
+            self::$numeroDeContas++;
+        }
+        public function __destruct()
+        {
+            self::$numeroDeContas--;
         }
         public function deposit($amount)
         {
@@ -44,5 +51,9 @@
         public function getCpf(): string 
         {
             return $this->holder->getCpf();
+        }
+        public static function getNumeroDeContas(): int
+        {
+            return self::$numeroDeContas;
         }
     }

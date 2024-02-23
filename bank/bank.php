@@ -12,7 +12,9 @@ $secondAccount = new Account(new Holder('Nome2', '123.456.789-11'));
 $firstAccount -> transfer(500, $secondAccount);
 
 $thirdAccount = new Account(new Holder('Nome3', '123.456.789-12'));
-$thirdAccount -> deposit(200);
+$thirdAccount -> deposit(2000);
+$thirdAccount -> transfer(500, $firstAccount);
+$thirdAccount -> transfer(300, $secondAccount);
 
 $accounts = [$firstAccount, $secondAccount, $thirdAccount];
 
@@ -26,3 +28,10 @@ foreach ($accounts as $account) {
     echo PHP_EOL;
     var_dump($account);
 }
+
+?>
+<h1>
+    <?php
+    echo Account::getNumeroDeContas();
+ ?>
+</h1>
