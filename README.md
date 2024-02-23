@@ -1,2 +1,2 @@
-# alura
- repositorio dos cursos da alura
+# aluraTraining
+ Alura courses repositories.
