@@ -1,31 +1,27 @@
 <?php
 
+namespace Training\Bank\Model\Account;
+
+use Training\Bank\Model\Address;
+use Training\Bank\Model\{CPF, Person};
+
 class Holder
 {
-    private CPF $cpf;
-    private string $name;
+    private Person $person;
+    private Address $address;
 
-    public function __construct(CPF $cpf, string $name)
+    public function __construct(Person $person, Address $address)
     {
-        $this->cpf = $cpf;
-        $this->nameValidation($name);
-        $this->name = $name;
+        $this->address = $address;
+        $this->person = $person;
     }
 
-    public function getCpf(): string
+    public function getPerson(): Person
     {
-        return $this->cpf->getCpf();
+        return $this->person;
     }
-
-    public function getName(): string
+    public function getAddress(): Address
     {
-        return $this->name;
-    }
-    private function nameValidation(string $name)
-    {
-        if (strlen($name) < 5) {
-            throw new \Exception('Name must have at least 5 characters');
-            exit();
-        }
+        return $this->address;
     }
 }

@@ -1,65 +1,57 @@
 <?php
 
-require_once 'src/Model/Account/Account.php';
-require_once 'src/Model/Account/Holder.php';
-require_once 'src/Model/Account/CPF.php';
+require_once 'autoload.php';
 
-$firstAccount = new Account(
-                    new Holder(
-                            new CPF('123.456.789-10'),
-                            'Name 1',
-                    )
-);
-$secondAccount = new Account(
-                    new Holder(
-                            new CPF('123.456.789-11'),
-                            'Name 2',
-                    )
-);
-$thirdAccount = new Account(
-                    new Holder(
-                            new CPF('123.456.789-12'),
-                            'Name 3',
-                    )
-);
-$fourthAccount = new Account(
-                    new Holder(
-                            new CPF('123.456.789-13'),
-                            'Name 4',
+use Training\Bank\Model\{CPF, Address, Person};
+use Training\Bank\Model\Account\{Account, Holder};
+use Training\Bank\Model\Employees\{Employee};
+
+$endereco01 = new Address('City1','Neighborhood01','Street01','1007A');
+$firstAccount = new Account (
+                    new Holder (
+                        new Person (
+                            new CPF ('123.456.789-11'),
+                            'account01'),
+                        $endereco01
                     )
 );
 
-$firstAccount->deposit(2500);
-$secondAccount->deposit(500);
-$thirdAccount->deposit(500);
-$fourthAccount->deposit(300);
+$endereco02 = new Address('City02','Neighborhood02','Street02','1007B');
+$secondAccount = new Account (
+                    new Holder (
+                        new Person (
+                            new CPF ('123.456.789-12'),
+                            'account02'
+                        ),
+                        $endereco02
+                    )
+);
 
-$firstAccount->withdraw(500);
+$accountList = [$firstAccount, $secondAccount];
 
-$firstAccount->transfer(500, $secondAccount);
-$firstAccount->transfer(500, $thirdAccount);
-$secondAccount->transfer(100, $fourthAccount);
-$thirdAccount->transfer(100, $fourthAccount);
-
-//unset($secondAccount);
-
-$accounts = [$firstAccount, $secondAccount, $thirdAccount, $fourthAccount];
-
-//...PRINT BLOCk...
-foreach ($accounts as $account) {
-    ?>
-    <h1><?php echo 'Name: ' . $account->getName() . PHP_EOL; ?></h1>
-    <h2><?php echo 'CPF: ' . $account->getCpf(). PHP_EOL;?></h2>
-    <h2><?php echo 'Ag: ' . Account::getAgNumber() . PHP_EOL;?></h2>
-    <h2><?php echo 'Balance: ' . $account->getBalance() . PHP_EOL?></h2>
-    <?php
+foreach ($accountList as $account) {
+    echo 'CPF: ' . $account->getHolder()->getPerson()->getCpf() . PHP_EOL;
+    echo 'Name: ' . $account->getHolder()->getPerson()->getName() . PHP_EOL;
+    echo 'Balance: ' . $account->getBalance() . PHP_EOL;
+    echo 'City: ' . $account->getHolder()->getAddress()->getCity() . PHP_EOL;
+    echo 'Neighborhood: ' . $account->getHolder()->getAddress()->getNeighborhood() . PHP_EOL;
+    echo 'Street: ' . $account->getHolder()->getAddress()->getStreet() . PHP_EOL;
+    echo 'Number: ' . $account->getHolder()->getAddress()->getNumber() . PHP_EOL;
     echo PHP_EOL;
-    //var_dump($account);
-}
+};
 
-?>
-<h1>
-    <?php
-    echo 'Accounnts total: ' . Account::getAccounts();
- ?>
-</h1>
+$firstEmployee = new Employee (
+                    new Person(
+                        new CPF('123.456.789-10'),
+                        'Nome deve ter mais que 5 caracteres'),
+                    'Role01'
+);
+
+$employeeList = [$firstEmployee];
+
+foreach ($employeeList as $employee) {
+    echo 'CPF: ' . $employee->getPerson()->getCpf() . PHP_EOL;
+    echo 'Name: ' . $employee->getPerson()->getName() . PHP_EOL;
+    echo 'Role: ' . $employee->getRole() . PHP_EOL;
+    echo PHP_EOL;
+};

@@ -1,5 +1,7 @@
 <?php
 
+namespace Training\Bank\Model;
+
 class CPF
 {
     private string $cpf;

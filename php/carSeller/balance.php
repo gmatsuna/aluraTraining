@@ -1,6 +1,8 @@
 <?php
 
-require_once 'src/Store.php';
+require_once 'autoload.php';
+
+use Training\Store\Model\Store\Store;
 
 $firstStore = new Store(
     '11.111.111/0001-11',

@@ -1,5 +1,6 @@
 <?php
 
+namespace Training\Store\Model\Store;
 class Store
 {
     private string $cnpj;
