@@ -2,7 +2,7 @@
 
 namespace Training\Bank\Model\Account;
 
-class Account extends Holder
+abstract class Account extends Holder
 {
     private Holder $holder;
     private float $balance;
@@ -13,6 +13,8 @@ class Account extends Holder
         $this->balance = 0;
     }
 
+// Account information Getter
+
     public function getHolder(): Holder
     {
         return $this->holder;
@@ -20,5 +22,17 @@ class Account extends Holder
     public function getBalance(): float
     {
         return $this->balance;
+    }
+
+// Account Operations
+    abstract protected function tax (): float;
+
+    public function deposit(float $amount): void
+    {
+        $this->balance += $amount;
+    }
+    public function withdraw(float $amount): void
+    {
+        $this->balance -= $amount + ($this->tax() * $amount);
     }
 }
