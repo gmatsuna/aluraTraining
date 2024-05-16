@@ -4,22 +4,20 @@ namespace Training\Bank\Model\Employees;
 
 use Training\Bank\Model\Person;
 
-class Employee
+abstract class Employee
 {
     private Person $person;
     private string $role;
 
-    public function __construct(Person $person, string $role)
+    public function __construct(Person $person)
     {
         $this->person = $person;
-        $this->role = $role;
     }
     public function getPerson(): Person
     {
         return $this->person;
     }
-    public function getRole(): string
-    {
-        return $this->role;
-    }
+    abstract public function getRole (): string;
+    abstract public function getsalary (): float;
+    abstract public function getBonus (): float;
 }
