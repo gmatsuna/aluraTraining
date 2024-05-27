@@ -1,0 +1,132 @@
+* {
+    color: #fff;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: linear-gradient(#1354A5 0%, #041832 33.33%, #041832 66.67%, #01080E 100%);
+    height: max-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header {
+    width: 80%;
+    height: auto;
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #fff;
+    border-radius: 20px;
+    display: grid;
+    justify-content: center;
+}
+
+main {
+    width: 80%;
+    height: 100%;
+    /* border: 1px solid #fff; */
+    display: flex;
+    row-gap: 15px;
+    flex-direction: column;
+}
+
+.container {
+    height: auto;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #fff;
+    border-radius: 20px;
+    box-shadow: 4px 4px 20px 0px rgba(1, 8, 14, 0.15);
+    background-image: url("../../img/Ruido.png");
+    background-size: 50% 50%;
+    position: relative;
+}
+
+.container__conteudo {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+}
+
+.container__botoes {
+    padding: 25px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.container__botao {
+    border-radius: 20px;
+    background: #1875E8;
+    padding: 16px 24px;
+    width: 33.33%;
+    font-size: 20px;
+    font-weight: 900;
+    border: none;
+}
+
+.container__input {
+    width: 130px;
+    height: auto;
+    border-radius: 20px;
+    background-color: #FFF;
+    border: none;
+    color: #1875E8;
+    padding: 1rem;
+    font-size: 20px;
+    font-weight: 700;
+    font-family: 'Inter', sans-serif;
+}
+
+.form {
+    width: auto;
+    display: grid;
+    grid-template-columns: auto 150px;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+}
+
+h1 {
+    font-family: 'Chakra Petch', sans-serif;
+    font-size: 72px;
+    color: #fffb00;
+    font-style: oblique;
+}
+
+h2 {
+    font-family: 'chakraPetch', sans-serif;
+    font-size: 50px;
+}
+
+p,
+button {
+    font-family: 'Inter', sans-serif;
+}
+
+button:disabled {
+    background-color: gray;
+}
+
+p {
+    color: #1875E8;
+    justify-self: baseline;
+    font-size: 30px;
+    font-weight: 900;
+    font-family: 'Chakra Petch', sans-serif;
+}
+
+#labelFatorial {
+    text-wrap: wrap;
+    width: 300px;
+}
+
+label {
+    font-size: 25px;
+    color: #d0f726;
+}
