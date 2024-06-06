@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+    {% block conteudo %}
+
+<!-- Tabuada -->
+    <div class="container">
+        <h2 id="h2SetimoExercicio"></h2>
+        <div class="container__conteudo">
+            <p id="p7"></p>
+        </div>
+        <div class="container__conteudo">
+            <form class="form" action="/app.js" method="post">
+                <label for="multiplo">Multiplo</label>
+                <input class="container__input" type="number" name="multiplo" id="multiplo">
+            </form>
+        </div>
+        <div class="container__botoes">
+            <button class="container__botao" onclick="tabCalcula()" id="tabCalcula" type="submit">Calcular</button>
+            <button class="container__botao" onclick="tabReset()" id="tabReset" type="submit" disabled="disabled">Reset</button>
+        </div>
+    </div>
+
+    {% endblock %}

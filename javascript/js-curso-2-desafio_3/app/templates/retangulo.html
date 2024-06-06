@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+    {% block conteudo %}
+
+<!-- Calculo de Area e Perimetro -->
+    <div class="container">
+        <h2 id="h2QuintoExercicio"></h2>
+        <div class="container__conteudo">
+            <p id="p5"></p>
+        </div>
+        <div class="container__conteudo">
+            <form class="form" action="/app.js" method="post">
+                <label for="alturaRetangulo">Altura</label>
+                <input class="container__input"  type="number" name="alturaRetangulo" id="alturaRetangulo">
+                <label for="larguraRetangulo">Largura</label>
+                <input class="container__input"  type="number" name="larguraRetangulo" id="larguraRetangulo">
+            </form>
+        </div>
+        <div class="container__botoes">
+            <button class="container__botao" onclick="areaRetangular()" id="retCalcula" type="submit">Calcular</button>
+            <button class="container__botao" onclick="retReset()" id="retReset" type="submit" disabled="disabled">Reset</button>
+        </div>
+    </div>
+
+    {% endblock %}

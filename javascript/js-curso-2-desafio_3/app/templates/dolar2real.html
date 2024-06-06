@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+    {% block conteudo %}
+
+<!-- Conversor Dolar para Real -->
+    <div class="container">
+        <h2 id="h2QuartoExercicio"></h2>
+        <div class="container__conteudo">
+            <p id="p4"></p>
+        </div>
+        <div class="container__conteudo">
+            <form class="form" action="/app.js" method="get">
+                <label for="valDolar">Valor em dolar: USD / US$</label>
+                <input class="container__input" type="number" name="valDolar" 
+                id="valDolar">
+            </form>
+        </div>
+        <div class="container__botoes">
+            <button class="container__botao" onclick="convertCalcula()" id="convertCalcula" type="submit">Calcular</button>
+            <button class="container__botao" onclick="convertReset()" id="convertReset" type="submit" disabled="disabled">Reset</button>
+        </div>
+    </div>
+
+    {% endblock %}

@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+    {% block conteudo %}
+
+<!-- Calculo de Fatorial -->
+    <div class="container">
+        <h2 id="h2TerceiroExercicio"></h2>
+        <div class="container__conteudo">
+            <p id="p3"></p>
+        </div>
+        <div class="container__conteudo">
+            <form class="form" action="/app.js" method="get">
+                <label id="labelFatorial" for="numFatorial">Digite o numero a ser calculado o Fatorial.</label>
+                <input class="container__input" type="number" name="numFatorial" id="numFatorial">
+            </form>
+        </div>
+        <div class="container__botoes">
+            <button class="container__botao" onclick="fatorialCalcula()" id="fatorialCalcula" type="submit">Calcular</button>
+            <button class="container__botao" onclick="fatorialReset()" id="fatorialReset" type="submit" disabled="disabled">Reset</button>
+        </div>
+    </div>
+
+    {% endblock %}

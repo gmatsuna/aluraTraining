@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+    {% block conteudo %}
+
+<!-- Verificacao de aprovacao -->
+    <div class="container">
+        <h2 id="h2PrimeiroExercicio"></h2>
+        <div class="container__conteudo">
+            <p id="p1"></p>
+        </div>
+        <div class="container__conteudo">
+            <form class="form" action="/app.js">
+                <label for="n1">Primeira nota: </label>
+                <input class="container__input" type="number" id="n1" name="n1" step="0.01" min="0.00" max="10">
+                <label for="n2">Segunda nota: </label>
+                <input class="container__input" type="number" id="n2" name="n2" step="0.01" min="0.00" max="10">
+                <label for="n3">Terceira nota: </label>
+                <input class="container__input" type="number" id="n3" name="n3" step="0.01" min="0.00" max="10">
+                <label for="n4">Quarta nota: </label>
+                <input class="container__input" type="number" id="n4" name="n4" step="0.01" min="0.00" max="10">
+            </form>
+        </div>
+        <div class="container__botoes">
+            <button class="container__botao" onclick="aprovacaoCalcula()" id="aprovacaoCalcula">calcular</button>
+            <button class="container__botao" onclick="aprovacaoReset()" id="aprovacaoReset" disabled="disabled">Reset</button>
+        </div>
+    </div>
+
+    {% endblock %}

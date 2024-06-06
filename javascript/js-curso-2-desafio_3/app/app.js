@@ -26,6 +26,9 @@ window.onload = function () {
     }
 }
 
+// index
+
+
 // Verificacao de aprovacao
 
 textoExibirNaTela('#h2PrimeiroExercicio', 'Verifica aprovacao.');

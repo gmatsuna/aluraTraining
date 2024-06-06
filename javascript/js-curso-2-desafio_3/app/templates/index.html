@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+    {% block conteudo %}
+
+    <div class="container">
+        <h1>Index</h1>
+        <h2>Exercicios</h2>
+        <h2>{{ text }}</h2>
+        <br\>
+        <p>{{ dados.profissao }}</p>
+        <br\>
+        <p>{{ dados.cidade }}</p>
+        <br\>
+
+        <nav>
+            <a href="aprovacao.html">Aprovacao</a>
+            <a href="imc()">IMC</a>
+            <a href="fatorial.html">Fatorial</a>
+            <a href="dolar2real.html">Dolar para Real</a>
+            <a href="retangulo.html">Area e Perimetro de retangulo</a>
+            <a href="circulo.html">Area e Perimetro de circulo</a>
+            <a href="tabuada.html">Tabuada</a>
+        </nav>
+    </div>
+    
+    {% endblock %}

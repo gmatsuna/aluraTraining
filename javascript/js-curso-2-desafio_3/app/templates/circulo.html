@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+    {% block conteudo %}
+
+<!-- Area e Perimetro circular -->
+    <div class="container">
+        <h2 id="h2SextoExercicio"></h2>
+        <div class="container__conteudo">
+            <p id="p6"></p>
+        </div>
+        <div class="container__conteudo">
+            <form class="form" action="/app.js" method="post">
+                <label for="raio">Raio</label>
+                <input class="container__input" type="number" name="raio" id="raio">
+            </form>
+        </div>
+        <div class="container__botoes">
+            <button class="container__botao" onclick="circCalcula()" id="circCalcula" type="submit">Calcular</button>
+            <button class="container__botao" onclick="circReset()" id="circReset" type="submit" disabled="disabled">Reset</button>
+        </div>
+    </div>
+
+    {% endblock %}

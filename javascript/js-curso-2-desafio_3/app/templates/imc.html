@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+    {% block conteudo %}
+
+<!-- Calculo de IMC -->
+    <div class="container">
+        <h2 id="h2SegundoExercicio"></h2>
+        <div class="container__conteudo">
+            <p id="p2"></p>
+        </div>
+        <div class="container__conteudo">
+            <form class="form" action="/app.js" method="post">
+                <label for="title">Digite sua idade: </label>
+                <input class="container__input" type="number" name="idade" id="idade">
+                <br>
+                <p id="pIdade"></p>
+                <label for="title">Digite sua altura: </label>
+                <input class="container__input" type="number" name="altura" id="altura">
+                <br>
+                <p id="pAltura"></p>
+                <label for="title">Digite seu peso: </label>
+                <input class="container__input" type="number" name="peso" id="peso">
+                <br>
+                <p id="pPeso"></p>
+            </form>
+        </div>
+        <div class="container__botoes">
+            <button class="container__botao" onclick="imcCalcula()" id="imcCalcula" type="submit">Calcular</button>
+            <button class="container__botao" onclick="imcReset()" id="imcReset" type="submit" disabled="disabled">Reset</button>
+        </div>
+    </div>
+
+    {% endblock %}

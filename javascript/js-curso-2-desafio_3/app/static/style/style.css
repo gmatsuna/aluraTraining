@@ -7,7 +7,7 @@
 
 body {
     background: linear-gradient(#1354A5 0%, #041832 33.33%, #041832 66.67%, #01080E 100%);
-    height: max-content;
+    height: 100rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -129,4 +129,13 @@ p {
 label {
     font-size: 25px;
     color: #d0f726;
+}
+
+nav {
+    display: flex;
+    flex-direction: column;
+}
+
+.ia {
+    display: flex;
 }
