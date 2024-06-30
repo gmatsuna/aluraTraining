@@ -15,6 +15,7 @@ class MainBody extends HTMLElement {
                 <div class="container__item">
 
                     <h1 class='h1__body' >Escreva os numeros a serem ordenados:</h1>
+                    
                     <div class="container__text">
                         <p class="container__text-text">Primeiro numero: </p>
                     </div>

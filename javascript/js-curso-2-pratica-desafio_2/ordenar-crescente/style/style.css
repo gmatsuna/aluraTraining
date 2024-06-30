@@ -74,3 +74,8 @@ main {
 
     /* border: var(--borda1); */
 }
+
+.container__text-text {
+    color: #b8e028;
+    font-size: 50px;
+}
