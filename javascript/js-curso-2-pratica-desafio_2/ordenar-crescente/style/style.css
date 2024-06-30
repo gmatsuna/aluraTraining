@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@700&family=Inter:wght@600;700&display=swap');
+
+* {
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --borda1: 1px solid #000;
+}
+
+body {
+    color: #fff;
+    /* background: linear-gradient(to bottom, rgba(0, 0, 0, 1) 0%, rgb(26, 79, 126) 25%, rgba(80, 94, 255, 0.85) 50%, rgba(26, 79, 126) 75%, rgba(0, 0, 0, 1) 100%); */
+    background: #0e7e7e;
+    height: 100vh;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    height: auto;
+
+    font-family: 'Chakra Petch', sans-serif;
+    font-weight: 700;
+    font-size: 60px;
+
+    border: var(--borda1);
+}
+
+.h1__header {
+    color: #fff;
+    padding: 50px;
+}
+
+.h1__header-emphasis {
+    color: #539b68;
+    padding: 5px;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    border: var(--borda1);
+}
+
+.container__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    background-image: url('../../../img/Ruido.png');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+
+    border: var(--borda1);
+    border-radius: 30px;
+    
+}
+
+.h1__body {
+    font-size: 80px;
+}
+
+.container {
+
+    /* border: var(--borda1); */
+}
