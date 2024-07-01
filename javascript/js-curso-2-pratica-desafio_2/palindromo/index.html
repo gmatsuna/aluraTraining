@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/style.css">
+    <script src="apps/apps.js" defer></script>
+    <title>Palíndromo</title>
+</head>
+<body class="body">
+    <header>
+        <h1 class="header__title">Verificador de <span class="header__emphases" >Palíndromo</span></h1>
+    </header>
+    <main>
+        <div class="container">
+            <div class="container__item">
+                <div class="container__text">
+                    <p>Escreva a palavra a verificar.</p>
+                </div>
+                <div class="container__input">
+                    <label for="str-input">
+                        <input type="text" name="str-input" id="str-input" >
+                    </label>
+                </div>
+                <section class="container__botoes">
+                    <a onclick="verificar()" href="#" class="container__botao">verificar</a>
+                    <a onclick="metodo2()" href="#" class="container__botao">metodo2</a>
+                </section>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

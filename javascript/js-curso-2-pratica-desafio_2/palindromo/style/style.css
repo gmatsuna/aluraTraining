@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@700&family=Inter:wght@600;700&display=swap');
+
+* {
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --borda: 3px solid #da2727;
+    --borda2: 3px solid #747cc5;
+}
+
+.body {
+    color: #FFFFFF;
+
+    min-height: 100vh;
+
+    background: rgb(0, 0, 0);
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 1) 0%, rgb(12, 14, 1) 25%, rgba(135, 231, 46, 0.85) 50%, rgb(11, 14, 1) 75%, rgba(0, 0, 0, 1) 100%);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    padding: 2rem;
+
+    /* border: var(--borda); */
+}
+
+@media screen and (min-width: 1440px) {
+    .body {
+        padding: 2rem calc((100vw - 1086px)/2);
+    }
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Chakra Petch', sans-serif;
+
+    /* border: var(--borda); */
+}
+
+.header__title {
+    font-size: 80px;
+    font-weight: 700;
+}
+
+.header__emphases {
+    color: #12685c;
+}
+
+.container {
+    /* border: var(--borda2); */
+}
+
+.container__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    /* border: var(--borda); */
+}
+
+.container__text {
+    font-family: 'Chakra Petch', sans-serif;
+    font-size: 50px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 15px;
+
+    /* border: var(--borda); */
+}
+
+.container__input {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    /* border: var(--borda); */
+}
+
+#str-input {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+    font-size: 50px;
+    margin: 35px;
+
+    /* border: var(--borda2); */
+}
+
+.container__botoes {
+    display: flex;
+    width: 100%;
+    height: auto;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+
+    /* border: var(--borda2); */
+}
+
+.container__botao {
+    text-decoration: none;
+    width: 30%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    border-radius: 10px;
+    padding: 10px;
+    color: #FFFFFF;
+
+    border: var(--borda);
+}

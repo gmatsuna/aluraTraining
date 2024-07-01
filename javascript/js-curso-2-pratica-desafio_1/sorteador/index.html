@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@700&family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style/style.css">
+    <title>Sorteador de números.</title>
+    <script src="apps/app.js" defer></script>
+</head>
+<body>
+    <header>
+        <header-body></header-body>
+    </header>
+    <main>
+        <div class="container">
+            <div class="container__conteudo">
+                <div class="container__informacoes">
+                    <div class="container__texto">
+                        <div class="container__campo">
+                            <label for="qtd" class="texto__paragrafo">Quantidade de números</label>
+                            <input class="container__input" id="qtd" type="number" min="1">
+                        </div>
+                        
+                        <div class="container__campo">
+                            <label for="de" class="texto__paragrafo">Do número</label>
+                            <input class="container__input" id="de" type="number" min="1">
+                        </div>
+                        
+                        <div class="container__campo">
+                            <label for="ate" class="texto__paragrafo">Até o número</label>
+                            <input class="container__input" id="ate" type="number" min="1">
+                        </div>
+                    </div>
+                    <div class="chute container__botoes">
+                        <button onclick="sortear()" id="btn-sortear" class="container__botao" >Sortear</button>
+                        <button onclick="reiniciar()" id="btn-reiniciar" class="container__botao-desabilitado" >Reiniciar</button>
+                    </div>
+                    <div class="container__texto-resultado" id="resultado">
+                        <label class="texto__paragrafo-resultado"><span class="container__texto-azul">Números sorteados: </span> nenhum até agora.</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

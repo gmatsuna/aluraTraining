@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/style.css">
+    <script src="apps/app.js" defer></script>
+    <title>AluGames</title>
+</head>
+<body class="body" >
+    <header>
+        <img class="logo-img" src="../../img/logo.svg" alt="Logo Alugames">
+        <h1 class="page-title" >Board <span class="page-title__emphasis" >Games</span></h1>
+    </header>
+    <main>
+        <div class="container main">
+
+            <div class="divisor">
+                <section class="divisor__line"></section>
+                <img src="../../img/fade_bar.svg" alt="" class="divisor__bar">
+                <section class="divisor__line"></section>
+            </div>
+
+            <div class="dashboard">
+                <div class="dashboard-item" id="game-1" >
+                    <div class="dashboard-img dashboard-img--rented">
+                        <img src="../../img/takenoko.png">
+                    </div>
+                    <div class="dashboard-titulo">
+                        <h2 class="dashboard-nome">Takenoko</h2>
+                    </div>
+                    <div class="dashboard-buttons">
+                        <button onclick="alteraStatus(1)" class="dashboard-button dashboard-button--return" type="submit">Devolver</button>
+                    </div>
+                </div>
+    
+                <div class="dashboard-item" id="game-2">
+                    <div class="dashboard-img">
+                        <img src="../../img/monopoly.png">
+                    </div>
+                    <div class="dashboard-titulo">
+                        <h2 class="dashboard-nome">Monopoly</h2>
+                    </div>
+                    <div class="dashboard-buttons">
+                        <button onclick="alteraStatus(2)" class="dashboard-button" type="submit">Alugar</button>
+                    </div>
+                </div>
+    
+                <div class="dashboard-item" id="game-3" >
+                    <div class="dashboard-img dashboard-img--rented">
+                        <img src="../../img/ticket_to_ride.png">
+                    </div>
+                    <div class="dashboard-titulo">
+                        <h2 class="dashboard-nome">Ticket to Ride</h2>
+                    </div>
+                    <div class="dashboard-buttons">
+                        <button onclick="alteraStatus(3)" class="dashboard-button dashboard-button--return" type="submit">Devolver</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <img class="hachuras" src="../../img/hachuras.svg" alt="">
+    </main>
+</body>
+</html>
