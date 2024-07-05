@@ -10,14 +10,17 @@ function alteraStatus(i) {
     let img = game.querySelector('.dashboard-img');
     let nome = game.querySelector('.dashboard-nome').textContent;
     let btn = game.querySelector('.dashboard-button');
+    let imagem = game.querySelector('img');
 
     if (btn.classList.contains('dashboard-button--return')) {
 
-        let decisao = confirm('Tem certeza?');
+        let decisao = confirm(`Tem certeza que deseja devolver o jogo ${nome}?`);
 
         if (decisao == true) {
             img.classList.remove('dashboard-img--rented');
             img.classList.add('dashboard-img');
+
+            imagem.classList.value = 'img';
 
             btn.textContent = 'Alugar';
             btn.classList.remove('dashboard-button--return');
@@ -31,7 +34,11 @@ function alteraStatus(i) {
         btn.classList.add('dashboard-button--return');
         img.classList.add('dashboard-img--rented');
 
+        imagem.classList.value = 'img--rented';
+
         jogosAlugados++;
+
+        alert(`Jogo ${nome} alugado com sucesso!`);
     }
 
     i ='';

@@ -3,15 +3,18 @@ function verificar () {
     let str = document.getElementById('str-input').value;
     let lower = str.toLowerCase(str).replace(re, '');
     let len = lower.length;
-    alert(`O inverso da palavra e ${lower}`);
+
+    if (str === '') {
+        document.getElementById('texto__resultado').innerHTML = `ERRO: Voce deve digitar algum texto na caixa acima.`;
+        alert(`ATENCAO!!! Um texto deve ser inserido na caixa abaixo.`);
+    }
 
     for (let i = 0; i < len/2; i++) {
         if (lower[i] !== lower[len -1 -i]) {
-            console.log('Não, não é um palindrommo: ');
+            document.getElementById('texto__resultado').innerHTML = `NÃO, o texto inserido não é um Palíndromo!`;
             return false;
         }
-        console.log('Sim, e um palindrommo: ')
-        
+        document.getElementById('texto__resultado').innerHTML = `SIM, o texto inserido é um Palíndromo!`;
     }
    
 }
@@ -22,11 +25,19 @@ function metodo2() {
     let lowRegStr = str.toLowerCase().replace(re, '');
     let reverseStr = lowRegStr.split('').reverse().join('');
 
-    alert(`O inverso da palavra e ${reverseStr}`);
-
-    if (lowRegStr === reverseStr) {
-        console.log('É um palindromo: ');
+    if (str === '') {
+        document.getElementById('texto__resultado').innerHTML = `ERRO: Voce deve digitar algum texto na caixa acima.`;
+        alert(`ATENCAO!!! Um texto deve ser inserido na caixa abaixo.`);
+    } else if (lowRegStr === reverseStr) {
+        document.getElementById('texto__resultado').innerHTML = `SIM, o texto inserido é um Palíndromo!`;
     } else {
-        console.log('Não é um palindromo:  ');
+        document.getElementById('texto__resultado').innerHTML = `NÃO, o texto inserido não é um Palíndromo!`;
     }
+}
+
+function reiniciar() {
+    document.getElementById('str-input').value = "";
+    document.getElementById('texto__resultado').innerHTML = `
+        <h1 id="texto__resultado">Resultado...</h1>
+    `;
 }

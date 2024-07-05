@@ -12,7 +12,55 @@
         <header-body></header-body>
     </header>
     <main>
-        <main-body></main-body>
+        <!-- <main-body></main-body> -->
+        <div class="container">
+            <div class="container__box">
+
+                <div class="container__title">
+                    <h1 class='h1__body' >Escreva os números a serem ordenados:</h1>
+                </div>
+                <div class="container__item">
+                    <div class="container__item-block">
+                        <div class="container__text">
+                            <p class="container__text-text">Primeiro número: </p>
+                        </div>
+                        <div class="container__input">
+                            <label for="num1">
+                                <input class="input" type="number" name="num1" id="num1" >
+                            </label>
+                        </div>
+                    </div>
+                    <div class="container__item-block">
+                        <div class="container__text">
+                            <p class="container__text-text">Segundo número: </p>
+                        </div>
+                        <div class="container__input">
+                            <label for="num2">
+                                <input class="input" type="number" name="num2" id="num2" >
+                            </label>
+                        </div>
+                    </div>
+                    <div class="container__item-block">
+                        <div class="container__text">
+                            <p class="container__text-text">Terceiro número: </p>
+                        </div>
+                        <div class="container__input">
+                            <label for="num3">
+                                <input class="input" type="number" name="num3" id="num3" >
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="container__button">
+                    <button id="btn1" class="button" onclick="ordenarNumeros()">Ordenar</button>
+                    <button id="btn2" class="button-desabled" onclick="reiniciar()">Reiniciar</button>
+                </div>
+                <div class="container__result">
+                    <h1 class="text__result">Aguardando os<spa class="text__result-emphasis"> números </spa>a serem organizados...</h1>
+                </div>
+
+            </div>
+        </div>
     </main>
 </body>
 </html>
