@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@700&family=Inter:wght@400;600;700&display=swap"
+    rel="stylesheet">
+    <link rel="stylesheet" href="styles/style.css">
+    <script src="./apps/app.js" defer></script>
+    <title>Carrinho de compras</title>
+</head>
+<body>
+    <header>
+        <h1 id="title">Carrinho de <span class="container__texto-azul">compras</span>.</h1>
+    </header>
+
+    <main class="container">
+        <form class="container-item">
+            <img src="./assets/grafismo-azul.svg" alt="grafismo azul">
+            <div class="container-products">
+                <label class="campo-grupo">
+                    <span class="texto-medio-azul">Produto</span>
+                    <select name="produto" id="produto" class="container-input">
+                        <option value="Fone de ouvido - R$100">Fone de ouvido - R$100</option>
+                        <option value="Celular - R$1400">Celular - R$1400</option>
+                        <option value="Oculus VR - R$5000">Oculus VR - R$5000</option>
+                    </select>
+                </label>
+            </div>
+            <div class="container-qtd">
+                <label class="campo-grupo">
+                    <span class="texto-medio-azul">Qtde.</span>
+                    <input type="number" id="qtd" name="quantidade" min="1" class="container-input">
+                </label>
+            </div>
+            <div class="container-btn">
+                <button type="button" id="btn-add" class="container-btn" onclick="adicionar()">
+                    Adicionar
+                </button>
+                <button type="button" id="btn-remove" class="container-btn container-btn--disabled" onclick="limpar()">
+                    Limpar
+                </button>
+            </div>
+            <div class="container-glass--img">
+                <img src="./assets/oculos.png" alt="oculos">
+            </div>
+        </form>
+        <div class="container-list">
+            <div class="container-list--title">
+                <img src="./assets/icone-carrinho.svg" alt="Produtos no carrinho">
+                <h3>Produtos no carrinho</h3>
+            </div>
+            <div class="container-list-products">
+            </div>
+
+            <div class="container-divisoria"></div>
+
+            <div class="container-total">
+                <p class="carrinho__total">Total:
+                    <span class="container__texto-azul" id="valor-total">R$1400</span>
+                </p>
+            </div>
+        </div>
+    </main>
+    
+</body>
+</html>
