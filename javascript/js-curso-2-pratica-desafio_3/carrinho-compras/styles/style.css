@@ -6,7 +6,6 @@
 
 body {
     min-height: 100vh;
-    /* width: 1050px; */
     background: linear-gradient(to bottom,
         #01080E 10%,
         #FFF 10%,
@@ -42,6 +41,14 @@ button {
     padding: 10px 20px;
     border-radius: 15px;
     width: 15rem;
+}
+
+.container {
+    flex: 1;
+
+    border: 2px solid #c2b500;
+
+    display: flex;
 }
 
 .container-item {
@@ -117,7 +124,7 @@ button {
     height: 3rem;
 }
 
-.container-list-products {
+#container-list-products {
     display: flex;
     flex-direction: column;
     gap: 15px;
