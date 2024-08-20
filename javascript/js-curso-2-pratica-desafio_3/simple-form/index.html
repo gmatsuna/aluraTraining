@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/style.css">
+    <script src="apps/app.js" defer></script>
+    <title>Document</title>
+</head>
+<body>
+
+    <header>
+        <h1>Simple Form</h1>
+    </header>
+
+    <nav>
+        <h3>Exercicio do desafio 3</h3>
+        <p>Crie um formulário simples com campos de entrada e utilize JavaScript para recuperar os valores digitados nos campos usando a propriedade value. Exiba os valores no console e na tela.</p>
+    </nav>
+
+    <main>
+        <article>
+            <div class="item">
+                <label for="str1">primeira string</label>
+                <input type="text" name="str1" id="str1">
+            </div>
+            <div class="item">
+                <label for="str2">segunda string</label>
+                <input type="text" name="str2" id="str2">
+            </div>
+            <div class="buttons">
+                <button onclick="enviar()">Enviar strings</button>
+                <button onclick="limpar()">Limpar valores</button>
+            </div>
+        </article>
+
+        <section class="result result-limpo" id="result1"></section>
+        <section class="result result-limpo" id="result2"></section>
+    </main>
+
+</body>
+</html>

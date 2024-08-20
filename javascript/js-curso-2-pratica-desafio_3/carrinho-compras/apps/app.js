@@ -7,15 +7,18 @@ function adicionar() {
     var productName = produto.split(' - ')[0];
     var productValue = produto.split('$')[1];
 
-    var itemSum = qtd*productValue;
-
-    var itemList = document.getElementById('container-list-products');
-    itemList.innerHTML = itemList.innerHTML + `
-        <section class="carrinho__produtos__produto">
-            <span class="texto-azul">${qtd}x</span> ${productName} <span class="texto-azul">R$${itemSum},00</span>
-        </section>
-    `;
-
+    if (qtd !=="" && productValue != "") {
+        var itemSum = qtd*productValue;
+        var itemList = document.getElementById('container-list-products');
+        itemList.innerHTML = itemList.innerHTML + `
+            <section class="carrinho__produtos__produto">
+                <span class="texto-azul">${qtd}x</span> ${productName} <span class="texto-azul">R$${itemSum},00</span>
+            </section>
+        `;
+    } else {
+        alert("Preencha os campos corretamente");
+        return;
+    }
 
     total += itemSum;
     let campoTotal = document.getElementById('valor-total');
