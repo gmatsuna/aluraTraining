@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <script src="./apps/app.js"></script>
 </head>
 <body>
     <header>
@@ -13,10 +15,19 @@
         <article class="container">
             <p>Receba, no mínimo, duas sentenças como uma string e utilize split() para quebrá-la em frases menores com base em um ponto e vírgula como delimitador.</p>
             <div class="container-input">
-                <label for="str"></label>
-                <input type="text" id="str" placeholder="Digite a sentença com 2 frases, separadas por ponto e vírgula." >
+                <label for="str">Digite as sentenças.</label>
+                <input type="text" id="str" placeholder="Digite a sentença com 2 frases, separadas por ponto e vírgula." value="gdfsgfseareg;dfgsdfgsgf" >
+
+            </div>
+            <div class="container-buttons">
+                <button onclick="splitText()">Quebrar</button>
+                <button onclick="reset()">Reiniciar</button>
             </div>
         </article>
+        <section class="result hide" id="result">
+            <div id="result-str1"></div>
+            <div id="result-str2"></div>
+        </section>
     </main>
 </body>
 </html>

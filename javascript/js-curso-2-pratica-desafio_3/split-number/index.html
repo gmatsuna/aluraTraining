@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./apps/app.js" defer></script>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+    <header>
+        <h1>Split Number</h1>
+    </header>
+    <main>
+        <article class="container">
+            <div class="container-explain">
+                <h2>Explicação</h2>
+                <p>Receba uma string contendo números separados por vírgulas. Utilize split() para separar os números e exibi-los no console.</p>
+            </div>
+            <div class="container-input">
+                <label for="str">String de números separados por vírgula:</label>
+                <input type="text" id="str" placeholder="Digite a string de números separados por vírgula." value="1,2,3,4,5">
+            </div>
+            <div class="container-buttons">
+                <button onclick="splitNumber()">Separar</button>
+                <button onclick="reset()">Limpar</button>
+            </div>
+        </article>
+        <section>
+            <p class="hide" id="result"></p>
+        </section>
+    </main>
+</body>
+</html>
