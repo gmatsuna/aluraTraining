@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playwrite+CU:wght@100..400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="styles/style.css">
+    <script src="./apps/app.js" defer></script>
+
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <img src="./assets/Logo-e-tricket.png" alt="">
+        <h1>Compre seu ingresso.</h1>
+    </header>
+
+    <main class="container">
+
+        <article class="container-box" id="container-input">
+            <label for="tipo">Escolha o tipo:</label>
+            <select name="tipo" id="select-input">
+                <option value="normal">Normal</option>
+                <option value="preferencial">Preferencial</option>
+                <option value="vip">Vip</option>
+            </select>
+            <input type="number" id="qtd-input" min="1" max="10">
+            <button onclick="comprar()" type="button" id="container-btn">
+                <i class="fa-solid fa-money-bill"></i> Comprar
+            </button>
+        </article>
+
+        <article class="container-box" id="container-div">
+            <img src="./assets/SVG/Hachuras.svg" alt="" id="hachura" >
+        </article>
+        <article class="container-box" id="container-tickets">
+            <h3>Quantidade disponível:</h3>
+            <div class="container-tickets--disponivel">
+                <ul>
+                    <li >Normal:  <span id="qtd-normal" >500</span></li>
+                    <li >Preferencial: <span id="qtd-pref" >200</span></li>
+                    <li >Vip: <span id="qtd-vip" >100</span></li>
+                </ul>
+            </div>
+        </article>
+    </main>
+</body>
+</html>
