@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="./apps/app.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Calculadora Simples</h1>
+    </header>
+    <main class="container">
+        <p>Escreva um programa de calculadora simples com funções separadas para adição, subtração, multiplicação e divisão. Utilize um bloco condicional para determinar qual função executar com base em uma variável que representa a operação desejada.</p>
+        <article class="container-input">
+            <h2>Digite 2 numeros:</h2>
+            <input type="number" name="num1" id="num1" value="2">
+            <input type="number" name="num2" id="num2" value="5">
+        </article>
+        <article>
+            <select name="operation" id="operation">
+                <ul>
+                    <li><option value="soma">Soma</option></li>
+                    <li><option value="subtracao">Subtração</option></li>
+                    <li><option value="multiplicacao">Multiplicação</option></li>
+                    <li><option value="divisao">Divisão</option></li>
+                </ul>
+            </select>
+        </article>
+        <article>
+            <button onclick="calcular()">Calcular</button>
+            <p id="result"></p>
+        </article>
+    </main>
+</body>
+</html>

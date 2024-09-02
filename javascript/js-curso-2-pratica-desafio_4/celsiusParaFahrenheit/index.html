@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <script src="./apps/app.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Temperature converter</h1>
+    </header>
+    <main>
+        <p>Crie uma função que converta a temperatura de Celsius para Fahrenheit e vice-versa. Utilize uma variável para indicar a escala desejada e um bloco condicional para determinar qual conversão realizar</p>
+        <article class="container">
+            <div class="container-chose">
+                <div class="c2f">
+                    <input type="radio" name="convert" id="c2f">
+                    <label for="c2f">Celsius para Fahrenheit</label>
+                </div>
+                <div class="f2c">
+                    <input type="radio" name="convert" id="f2c">
+                    <label for="f2c">Fahrenheit para Celsius</label>
+                </div>
+            </div>
+            <div class="container-input">
+                <label for="">Valor a ser convertido:</label>
+                <input type="number" id="temperature">
+            </div>
+            <div class="container-btn">
+                <button onclick="converter()" id="convertBtn">Converter</button>
+            </div>
+        </article>
+        <section class="hide" id="result">Resposta</section>
+    </main>
+</body>
+</html>

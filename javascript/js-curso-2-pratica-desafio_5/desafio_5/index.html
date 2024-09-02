@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="styles/style.css">
+
+    <script src="./apps/app.js" defer></script>
+
+
+    <title>Sorteio de Amigo Secreto</title>
+</head>
+<body>
+
+    <header>
+        <h1>Sorteio de Amigo Secreto</h1>
+    </header>
+    
+    <main class="container">
+        <article class="container-input">
+            <h3>Amigo a acrescentar:</h3>
+            <input type="text" name="addFriend" id="addFriend" placeholder="Adicione um amigo.">
+        </article>
+        <article class="container-buttons">
+            <button onclick="add()">Adicionar</button>
+            <button onclick="sort()">Sortear</button>
+            <a onclick="reset()" href="">Reiniciar</a>
+        </article>
+        <section class="container-incluidos">
+            <h3>Amigos participantes: </h3>
+            <ul id="friendsList">
+            </ul>
+        </section>
+        <section>
+            <h3>Sorteados: </h3>
+            <p id="sorteado"></p>
+        </section>
+    </main>
+</body>
+</html>
