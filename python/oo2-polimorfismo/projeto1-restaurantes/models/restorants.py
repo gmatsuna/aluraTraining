@@ -17,7 +17,7 @@ class Restaurant:
     
     @classmethod
     def rest_list(cls):
-        print(f'{'Nome do restaurante'.ljust(25)} | {'Categoria'.ljust(25)} | {'Avaliação'.ljust(25)} |{'Status'}')
+        print(f'\n{'Nome do restaurante'.ljust(25)} | {'Categoria'.ljust(25)} | {'Avaliação'.ljust(25)} |{'Status'}\n')
         for restaurant in cls.restaurants:
             print(f'{restaurant._name.ljust(25)} | {restaurant._category.ljust(25)} | {str(restaurant.get_average_rating).ljust(25)} | {restaurant.activated}')
 
@@ -47,7 +47,7 @@ class Restaurant:
 
     @property
     def list_menu_items(self):
-        print(f'Cardapio do restaurante {self._name}')
+        print(f'\nCardapio do restaurante {self._name}\n')
         print(f'{"ID".ljust(3)} | {"Nome do item".ljust(25)} | {"Preço".ljust(15)} | {"Descrição/Tamanho".ljust(25)}')
         for i, item in enumerate (self._menu, 1):
             if hasattr(item, 'description'):

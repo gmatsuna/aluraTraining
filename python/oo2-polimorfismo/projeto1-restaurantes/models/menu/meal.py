@@ -7,3 +7,6 @@ class Meal(MenuItem):
 
     def __str__(self):
         return f'{self._name.capitalize()}: {self.description.capitalize()} - Price: {self._price:.2f}'
+    
+    def apply_desc(self):
+        self._price -= (self._price*0.05)
